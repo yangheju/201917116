@@ -1,0 +1,244 @@
+
+.TimeLine{
+    position: absolute;
+    top: 130px;
+    left: 60px;
+    width: 530px;
+    height: fit-content;
+    border: 1px solid #1b6fb7;
+    border-radius: 10px;
+}
+.TimeLine a{
+    text-decoration: none;
+    color: #2c2c2c;
+}
+
+.timezone {
+    width: 6px; /* 时间轴轴线的宽度 */
+    height: 450px;  /* 时间轴轴线的长度 */
+    background: lightblue;  /* 时间轴轴线的颜色 */
+    /* 将时间轴在页面显示为：居中 */
+    margin: 0 auto; 
+    margin-top: 50px;   /* 时间轴轴线与页面顶部的距离 */
+    border-radius: 3px; /* 时间轴轴线的圆角弧度 */
+    position: relative; /* 时间轴轴线的定位方式 */
+    -webkit-animation: heightSlide 2s linear;
+}
+
+@-webkit-keyframes heightSlide {
+    /* 百分比的意思就是duration（持续时间）的百分比 */
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 450px;
+    }
+}
+
+.timezone:after {
+    content: '未完待续...';
+    font-family: "幼圆";
+    font-weight: bold;
+    width: 100px;
+    color: #2c2c2c;
+    position: absolute;
+    margin-left: -35px;
+    bottom: -30px;
+    -webkit-animation: showIn 4s ease;
+}
+
+.timezone .time,
+.timezone .timeLeft, 
+.timezone .timeRight,
+.timezone .timeLast{
+    position: absolute;
+    margin-left: -10px;
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    background: lightblue;
+    -webkit-transition: all 0.5s;
+    -webkit-animation: showIn ease;
+}
+
+/* :nth-child() 选中第 n 个子元素 */
+.timezone .time:nth-child(1) {
+    -webkit-animation-duration: 1s;
+}
+
+.timezone .timeLeft:nth-child(2) {
+    -webkit-animation-duration: 1.5s;
+}
+
+.timezone .timeRight:nth-child(3){
+    -webkit-animation-duration: 2s;
+}
+
+.timezone .timeLast:nth-child(4){
+    -webkit-animation-duration: 2.5s;
+}
+
+.timezone .time:nth-child(5) {
+    -webkit-animation-duration: 3s;
+}
+
+.timezone .timeLeft:nth-child(6) {
+    -webkit-animation-duration: 3.5s;
+}
+
+.timezone .timeRight:nth-child(7){
+    -webkit-animation-duration: 4s;
+}
+
+.timezone .timeLast:nth-child(8){
+    -webkit-animation-duration: 4.5s;
+}
+
+@-webkit-keyframes showIn {
+
+    0%,
+    70% {
+        /* opacity: 0;表示隐藏元素 */
+        opacity: 0;
+    }
+
+    100% {
+        /* opacity: 0;表示显示元素 */
+        opacity: 1;
+    }
+}
+
+
+
+/* 设置每个阶段的日期的显示，如：2021-12-12 */
+.timezone .time h2,
+.timezone .timeLeft h2, 
+.timezone .timeRight h2,
+.timezone .timeLast h2{
+    position: absolute;
+    margin-left: -120px;
+    margin-top: 3px;
+    color: #2c2c2c;
+    font-size: 14px;
+    cursor: pointer;    /* 设置：光标呈现为指示链接的指针（一只手） */
+    -webkit-animation: showIn 3s ease;
+}
+
+.timezone .timeLeft h2 {
+    margin-left: 60px;  /* 日期与时间轴的距离 */
+    width: 100px;   /* 日期显示的宽度 */
+}
+.timezone .timeRight h2 {
+    margin-right: 60px; /* 日期与时间轴的距离 */
+    width: 100px;   /* 日期显示的宽度 */
+}
+.timezone .timeLast h2 {
+    margin-left: 60px; /* 日期与时间轴的距离 */
+    width: 100px;   /* 日期显示的宽度 */
+}
+
+.timezone .time:hover,
+.timezone .timeLeft:hover, 
+.timezone .timeRight:hover,
+.timezone .timeLast:hover{
+    border: 4px solid lightblue;
+    background: lemonchiffon;
+    box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.4);
+}
+
+.timezone .time div,        
+.timezone .timeLeft div,
+.timezone .timeRight div,
+.timezone .timeLast div{
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    left: 50px;
+    width: 215px;
+    height: 50px;
+    background: lightblue;
+    border: 3px solid #eee;
+    border-radius: 10px;
+    z-index: 2;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-animation: showIn 3s ease;
+    -webkit-transition: all 0.5s;
+}
+
+.timezone .timeLeft div {
+    left: -252px;
+}
+.timezone .timeRight div {
+    right: -337px;
+}
+.timezone .timeLast div {
+    left: -252px;
+}
+
+.timezone .time div:hover,
+.timezone .timeLeft div:hover,
+.timezone .timeRight div:hover,
+.timezone .timeLast div:hover{
+    height: 180px;  /* 鼠标悬停时，下拉框的高度 */
+}
+
+/* 设置："华北水利水电大学。。。"的字体格式 */
+.timezone .time div p,
+.timezone .timeLeft div p,
+.timezone .timeRight div p,
+.timezone .timeLast div p{
+    color: #2c2c2c;
+    font-weight: bold;
+    text-align: center;
+}
+
+.timezone .time:before,
+.timezone .timeLeft:before,
+.timezone .timeRight:before,
+.timezone .timeLast:before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 32px;
+    width: 0px;
+    height: 0px;
+    border: 10px solid transparent;
+    border-right: 10px solid #eee;
+    z-index: -1;
+    -webkit-animation: showIn 3s ease;
+}
+
+/* 设置白色小三角 */
+.timezone .timeLeft:before {
+    left: -33px;
+    border: 10px solid transparent;
+    border-left: 10px solid #eee;
+}
+/* 设置白色小三角 */
+.timezone .timeRight:before {
+    right: -33px;
+    border: 10px solid transparent;
+    border-right: 10px solid #eee;
+}
+/* 设置白色小三角 */
+.timezone .timeLast:before {
+    left: -33px;
+    border: 10px solid transparent;
+    border-left: 10px solid #eee;
+}
+
+.timezone .time div ul,
+.timezone .timeLeft div ul,
+.timezone .timeRight div ul,
+.timezone .timeLast div ul{
+    list-style: none;
+    width: 300px; 
+    padding: 8px 0px;
+    border-top: 2px solid #eee;
+    color: #2c2c2c;
+}
+

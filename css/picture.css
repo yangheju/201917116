@@ -1,0 +1,63 @@
+    #banner{
+    width: 1000px;
+    height: 500px;
+    margin: 10px auto;
+    }
+    #content{ 
+    width: 1000px; 
+    height: 500px; 
+    overflow: hidden; 
+    position: relative; 
+    }
+    #ul{
+    height: 500px;
+    position: absolute;
+    left: 0;
+    }
+    #ul li{
+    list-style: none;
+    width: 1000px;
+    height: 500px;
+    float: left;
+    }
+    #ul img{
+    width: 1000px;
+    height: 500px;
+    }
+    .b{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    cursor: pointer;
+    }
+    .b img{
+    width: 100px;
+    height: 100px;
+    }
+    #left{
+    top: 200px;
+    left: 50px;
+    }   
+    #right{
+    top: 200px;
+    right: 50px;
+    }
+    #dotul{
+    width: 500px;
+    position: relative;
+    left: 280px; 
+    top: 450px;
+    }
+    #dotul li{
+    list-style: none;
+    float: left;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: seagreen;  
+    margin-left: 20px;
+    cursor: pointer;
+    }
+    .active{
+    background-color: orangered !important;
+    }

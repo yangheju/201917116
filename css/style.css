@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.head > img{
+    display: inline-block;
+}
+.head{
+    background-color: #015FAF;
+    text-align: center;
+}
+.yihang{
+    text-align: left;
+    background-color: #015FAF;
+}
+.yihang > img{
+    display: inline-block;
+}
+p{
+   color: white;
+   font-size: 40px;
+}
+body{
+    margin: auto;
+}
+.title{
+    width: 100%;
+    height: 70px;
+    border: 1px transparent;
+    background-color: #015FAF;
+}
+.title_one{
+    width: 100px;
+    height: 70px;
+    border: 1px transparent;
+    float: left;
+    margin-left: 200px;
+}
+.title_two{
+    width: 100px;
+    height: 70px;
+    border: 1px transparent;
+    float: left;
+    margin-left: 400px;
+}
+.title_three{
+    width: 100px;
+    height: 70px;
+    border: 1px transparent;
+    float: left;
+    margin-left: 600px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.ziti{
+    font-size: 30px;
+    color: #4A4A4A;
+    font-weight: bold;
+}
+.box{
+   margin-top: -10px;
+   margin-bottom: 0%;
+}
+.under{
+    background-color: #015FAF;
+    text-align: center;
+    bottom: 0%;
+}
+
+
